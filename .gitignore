@@ -40,3 +40,5 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+/SuperMartAPIs/SuperMart.API/SuperMart.API/obj
+/SuperMartAPIs/SuperMart.API/.vs/SuperMart.API
