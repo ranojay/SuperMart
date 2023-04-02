@@ -7,9 +7,11 @@ namespace SuperMart.API.DataProviders
     public class CustomersProvider
     {
         protected SqliteConnection connection;
-        public CustomersProvider() 
+        protected DataBaseConfig dataBaseConfig;
+        public CustomersProvider(DataBaseConfig config) 
         {
-            connection = new SqliteConnection("Data Source=D:\\Dev\\Repos\\SuperMart\\SuperMartDB\\SuperMartDB.db");
+            dataBaseConfig = config;
+            connection = new SqliteConnection(dataBaseConfig.connectionString);
         }
 
         public async Task<IEnumerable<Customer>> GetAll()

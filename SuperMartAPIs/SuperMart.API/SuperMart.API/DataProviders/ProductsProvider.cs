@@ -6,9 +6,11 @@ namespace SuperMart.API.DataProviders
 {
     public class ProductsProvider
     {
-        public ProductsProvider() 
+        DataBaseConfig dataBaseConfig;
+        public ProductsProvider(DataBaseConfig config) 
         {
-            connection = new SqliteConnection("Data Source=D:\\Dev\\Repos\\SuperMart\\SuperMartDB\\SuperMartDB.db");
+            dataBaseConfig = config;
+            connection = new SqliteConnection(dataBaseConfig.connectionString);
         }
         protected SqliteConnection connection;
        
