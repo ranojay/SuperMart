@@ -2,39 +2,34 @@
 using Microsoft.Data.Sqlite;
 using SuperMart.API.Models;
 using Dapper;
+using SuperMart.API.DataProviders;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace SuperMart.API.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
+        ProductsProvider _provider;
+        public ProductsController(ProductsProvider provider)
+        { 
+            _provider = provider;
+        }
+
         // GET: api/<ProductsController>
         [HttpGet]
         public async Task<IEnumerable<Product>> Get()
         {
-            //SQLitePCL.raw.SetProvider(new SQLitePCL.sqlite3());
-            using var connection = new SqliteConnection("Data Source=D:\\Dev\\Repos\\SuperMart\\SuperMartDB\\SuperMartDB.db");
-            await connection.OpenAsync();
-            try
-            {
-                return await connection.QueryAsync<Product>("SELECT * FROM Products;");
-            }
-            catch (Exception ex)
-            {
-                int i = 0;
-            }
-
-            return new List<Product>();
+            return await _provider.GetAll();
         }
 
         // GET api/<ProductsController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<Product> Get(string id)
         {
-            return "value";
+            return await _provider.Get(id);
         }
 
         // POST api/<ProductsController>
