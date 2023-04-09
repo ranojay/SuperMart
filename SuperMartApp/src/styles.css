@@ -7,6 +7,11 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
 h1,
@@ -22,6 +27,42 @@ p {
   margin: 0;
 }
 
+nav {
+  background: #125699;
+  height: 50px;
+  width: 100%
+}
+
+label.logo {
+ color: whitesmoke;
+ font-size: 35px;
+ line-height: 50px;
+ font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display:  inline-block;
+  line-height: 50px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+a.active, a:hover {
+  background: #1976d2;
+  transition: 0.5s;
+  color: white;
+}
+
 .spacer {
   flex: 1;
 }
@@ -34,6 +75,7 @@ p {
   height: 60px;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   background-color: #d11ab0;
   color: white;
   font-weight: 600;
@@ -42,6 +84,14 @@ p {
 .toolbar img {
   margin: 0 16px;
 }
+
+/* .toolbar ul {
+  display: flex;
+
+  justify-content: space-around;
+
+  align-items: center;
+} */
 
 .toolbar #twitter-logo {
   height: 40px;
@@ -162,7 +212,7 @@ svg#rocket-smoke {
   z-index: -10;
 }
 
-a,
+/* a,
 a:visited,
 a:hover {
   color: #1976d2;
@@ -171,7 +221,7 @@ a:hover {
 
 a:hover {
   color: #125699;
-}
+} */
 
 .terminal {
   position: relative;
@@ -237,12 +287,14 @@ footer {
 footer a {
   display: flex;
   align-items: center;
+  float:inline-end;
 }
 
 footer div {
   display: flex;
   color: white;
   align-items: center;
+  float:inline-end;
 }
 
 .github-star-badge {
