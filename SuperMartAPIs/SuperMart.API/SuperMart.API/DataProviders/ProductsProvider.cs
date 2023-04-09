@@ -6,13 +6,14 @@ namespace SuperMart.API.DataProviders
 {
     public class ProductsProvider
     {
-        DataBaseConfig dataBaseConfig;
+        private DataBaseConfig dataBaseConfig;
+        private SqliteConnection connection;
         public ProductsProvider(DataBaseConfig config) 
         {
             dataBaseConfig = config;
             connection = new SqliteConnection(dataBaseConfig.connectionString);
         }
-        protected SqliteConnection connection;
+        
        
         public async Task<IEnumerable<Product>> GetAll()
         {

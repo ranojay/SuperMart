@@ -11,7 +11,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton(new DataBaseConfig { connectionString = builder.Configuration["ConnectionString"] });
 builder.Services.AddSingleton<ProductsProvider, ProductsProvider>();
 builder.Services.AddSingleton<CustomersProvider, CustomersProvider>();
-
+builder.Services.AddSingleton<ProductsProvider, ProductsProvider>();
+builder.Services.AddSingleton<OrdersProvider, OrdersProvider>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
