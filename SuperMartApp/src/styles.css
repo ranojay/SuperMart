@@ -59,8 +59,9 @@ nav ul li a {
 
 a.active, a:hover {
   background: #1976d2;
-  transition: 0.5s;
+  transition: 0.2s;
   color: white;
+  font-weight: bold;
 }
 
 .spacer {
