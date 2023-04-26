@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       console.log(this.loginForm.value);
       if(this.loginForm.value.password === '123') {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/portal']);
       }
     }
   }
