@@ -9,6 +9,8 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PortalComponent } from './components/portal/portal.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { SalesModule } from './modules/sales/sales.module';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { PortalComponent } from './components/portal/portal.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    PortalComponent
+    PortalComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SalesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
