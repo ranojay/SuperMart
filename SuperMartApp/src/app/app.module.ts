@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PortalComponent } from './components/portal/portal.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { SalesModule } from './modules/sales/sales.module';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SalesModule } from './modules/sales/sales.module';
     HeaderComponent,
     FooterComponent,
     PortalComponent,
-    SidenavComponent
+    SidenavComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
