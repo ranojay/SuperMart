@@ -17,7 +17,7 @@ const routes: Routes = [
     { path: 'sales', component: SalesComponent },
     { path: '', redirectTo: '/portal/home', pathMatch: 'full' },
   ]},
-  { path: '**', component: NotfoundComponent },
+  { path: '**', component: NotfoundComponent,  canActivate: [AuthGuard] },
 ]
 
 @NgModule({
