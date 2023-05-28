@@ -30,7 +30,8 @@ p {
 nav {
   background: #125699;
   height: 50px;
-  width: 100%
+  width: 100%;
+  position: fixed;
 }
 
 label.logo {
@@ -64,8 +65,9 @@ a.active, a:hover {
   font-weight: bold;
 }
 
-.spacer {
+.flex {
   flex: 1;
+  overflow: hidden;
 }
 
 .toolbar {
@@ -86,6 +88,10 @@ a.active, a:hover {
   margin: 0 16px;
 }
 
+.flex img {
+  padding: 20px 16px;
+}
+
 .column-layout {
    /*max-width: 1300px;
   background-color: #FFF;*/
@@ -102,13 +108,13 @@ a.active, a:hover {
 
   /*height: 650;/* /* 100% Full-height */
   width: 15%; /* 0 width - change this with JavaScript */
-  position: absolute; /* Stay in place */
+  position: fixed; /* Stay in place */
   /*z-index: 1; /* Stay on top */
-  /*top: 50px; /* Stay at the top */
+  top: 50px; /* Stay at the top */
   /*left: 0;*/
   background-color: #8f2525; /* Black*/
   
-  /*overflow-x: hidden; /* Disable horizontal scroll */
+  overflow: hidden; /* Disable horizontal scroll
   /*padding-top: 60px; /* Place content 60px from the top */
   /* flex: 1; */
 }
@@ -135,6 +141,16 @@ a.active, a:hover {
   /* flex-direction: row; */
   /* align-items: center; */
 }
+
+.home-content {
+ /* display: flex; */
+ justify-content: end;
+ /* padding: 10px; */
+ /* position: fixed; */
+  /* Disable horizontal scroll
+
+}
+
 
 svg.material-icons {
   height: 24px;
