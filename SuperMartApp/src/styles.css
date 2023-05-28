@@ -35,10 +35,10 @@ nav {
 }
 
 label.logo {
- color: whitesmoke;
- font-size: 35px;
- line-height: 50px;
- font-weight: bold;
+  color: whitesmoke;
+  font-size: 35px;
+  line-height: 50px;
+  font-weight: bold;
 }
 
 nav ul {
@@ -47,7 +47,7 @@ nav ul {
 }
 
 nav ul li {
-  display:  inline-block;
+  display: inline-block;
   line-height: 50px;
   margin: 0 5px;
 }
@@ -58,7 +58,8 @@ nav ul li a {
   text-transform: uppercase;
 }
 
-a.active, a:hover {
+a.active,
+a:hover {
   background: #1976d2;
   transition: 0.2s;
   color: white;
@@ -89,13 +90,13 @@ a.active, a:hover {
 }
 
 .flex img {
-  padding: 20px 16px;
+  padding: 5px 5px;
 }
 
 .column-layout {
-   /*max-width: 1300px;
+  /*max-width: 1300px;
   background-color: #FFF;*/
-  margin: auto ;
+  margin: auto;
   /*line-height: 1.65;
   padding: 20px 50px;*/
   /* display: flex; */
@@ -107,14 +108,19 @@ a.active, a:hover {
   height: calc(100% - 100px);
 
   /*height: 650;/* /* 100% Full-height */
-  width: 15%; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
+  width: 15%;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
   /*z-index: 1; /* Stay on top */
-  top: 50px; /* Stay at the top */
+  top: 50px;
+  /* Stay at the top */
   /*left: 0;*/
-  background-color: #8f2525; /* Black*/
-  
-  overflow: hidden; /* Disable horizontal scroll
+  background-color: #8f2525;
+  /* Black*/
+
+  overflow: hidden;
+  /* Disable horizontal scroll
   /*padding-top: 60px; /* Place content 60px from the top */
   /* flex: 1; */
 }
@@ -143,14 +149,28 @@ a.active, a:hover {
 }
 
 .home-content {
- /* display: flex; */
- justify-content: end;
- /* padding: 10px; */
- /* position: fixed; */
-  /* Disable horizontal scroll
+  display: flex;
+  margin: 0 10px 10px 10px;
+  padding: 50px 100px;
+  font-size: 20px;
+  /* position: fixed; */
+  /* Disable horizontal scroll*/
 
 }
 
+.home-content p {
+  font-size: 20px;
+  /* position: fixed; */
+  /* Disable horizontal scroll*/
+
+}
+
+.home-content  h1 {
+  font-size: 30px;
+  /* position: fixed; */
+  /* Disable horizontal scroll*/
+
+}
 
 svg.material-icons {
   height: 24px;
@@ -234,17 +254,18 @@ svg.material-icons:not(:last-child) {
 
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 50px;   /* Height of the footer */
-    background: rgb(54, 63, 67);
-    display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  /* Height of the footer */
+  background: rgb(54, 63, 67);
+  display: flex;
 }
 
 footer a {
   align-items: center;
-  float:inline-end;
+  float: inline-end;
 }
 
 footer div {
