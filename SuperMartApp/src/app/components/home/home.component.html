@@ -10,3 +10,26 @@
             <img width="600" height="300" src="./assets/images/retail.png">
         </div>
     </div>
+    <div>
+        <table>
+            <thead>
+                <th>PID</th>
+                <th>Name</th>
+                <th>Price</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of (products$ | async)">
+                    <td>
+                        {{product.pid}}
+                    </td>
+                    <td>
+                        {{product.name}}
+                    </td>
+                    <td>
+                        {{product.price}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -13,15 +13,18 @@ namespace SuperMart.API.Controllers
     public class ProductsController : ControllerBase
     {
         ProductsProvider _provider;
-        public ProductsController(ProductsProvider provider)
+        ILogger<ProductsController> _logger;
+        public ProductsController(ProductsProvider provider, ILogger<ProductsController> logger)
         { 
             _provider = provider;
+            _logger = logger;
         }
 
         // GET: api/<ProductsController>
         [HttpGet]
         public async Task<IEnumerable<Product>> Get()
         {
+            _logger.Log(LogLevel.Information, "Products: Get");
             return await _provider.GetAll();
         }
 

@@ -66,6 +66,33 @@ a:hover {
   font-weight: bold;
 }
 
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+ 
+}
+
+th {
+  background-color: #333;
+  color: white;
+}
+/* 
+tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+
+tr:hover {
+  background-color: #686d71;
+  font-weight: bold;
+}
+
 .flex {
   flex: 1;
   overflow: hidden;

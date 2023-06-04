@@ -8,11 +8,22 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddLogging();
 builder.Services.AddSingleton(new DataBaseConfig { connectionString = builder.Configuration["ConnectionString"] });
 builder.Services.AddSingleton<ProductsProvider, ProductsProvider>();
 builder.Services.AddSingleton<CustomersProvider, CustomersProvider>();
 builder.Services.AddSingleton<ProductsProvider, ProductsProvider>();
 builder.Services.AddSingleton<OrdersProvider, OrdersProvider>();
+const string corsPolicy = "CorsPolicy";
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy(name: corsPolicy, builder =>
+    {
+        builder.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,6 +33,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors(corsPolicy);
 app.UseAuthorization();
 
 app.MapControllers();
