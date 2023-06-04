@@ -11,21 +11,21 @@
         </div>
     </div>
     <div>
-        <table>
+        <table class="products-table">
             <thead>
-                <th>PID</th>
-                <th>Name</th>
-                <th>Price</th>
+                <th class="products-th">PID</th>
+                <th class="products-th">Name</th>
+                <th class="products-th">Price</th>
             </thead>
             <tbody>
-                <tr *ngFor="let product of (products$ | async)">
-                    <td>
+                <tr class="products-tr" *ngFor="let product of (products$ | async)">
+                    <td class="products-td">
                         {{product.pid}}
                     </td>
-                    <td>
+                    <td class="products-td">
                         {{product.name}}
                     </td>
-                    <td>
+                    <td class="products-td">
                         {{product.price}}
                     </td>
                 </tr>

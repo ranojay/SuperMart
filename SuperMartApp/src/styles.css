@@ -66,20 +66,20 @@ a:hover {
   font-weight: bold;
 }
 
-table {
+.products-table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
-td, th {
+.products-td, .products-th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
  
 }
 
-th {
+.products-th {
   background-color: #333;
   color: white;
 }
@@ -88,8 +88,9 @@ tr:nth-child(even) {
   background-color: #dddddd;
 } */
 
-tr:hover {
-  background-color: #686d71;
+tr.products-tr:hover {
+  background-color: #dadfe4;
+  color: rgb(239, 91, 91);
   font-weight: bold;
 }
 
